@@ -31,7 +31,7 @@ export default function Home() {
 
           <section className="mt-20 flex flex-col items-center gap-6">
             <Image
-              src="/VinceRomney.jpeg"
+              src="/VinceRomney.png"
               alt="Vincent Romney"
               width={160}
               height={160}
