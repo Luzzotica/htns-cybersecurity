@@ -21,9 +21,9 @@ export default function Home() {
             Suck Less at Cybersecurity
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
-            While I was in the U.S. Air Force I "shut down" a chemical plant by
-            blowing it up. Not with a plane. But with my laptop. I'll tell you
-            all about it in the first chapter.
+            During a targeted exercise in the U.S. Air Force we "shut down" a
+            chemical plant by blowing it up. Not with a plane. But with a
+            laptop. I'll tell you all about it in the first chapter.
           </p>
           <div className="mx-auto mt-10 max-w-sm">
             <EmailForm variant="first-chapter" />
@@ -65,14 +65,13 @@ export default function Home() {
               <p className="mt-4 text-zinc-600 dark:text-zinc-400">
                 I wrote this book because no one else wrote the damn thing. It's
                 a guide for living people, like you, to avoid losing all your
-                photos or becoming the next headline. Because security isn't
-                someone else's job anymore. It's yours.
+                photos or becoming the next headline.
               </p>
               <p className="mt-4 text-zinc-600 dark:text-zinc-400">
                 Because security isn't someone else's job anymore. It's yours.
               </p>
               <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-                Stay snarky.
+                Stay safe, stay snarky.
               </p>
             </div>
           </section>
