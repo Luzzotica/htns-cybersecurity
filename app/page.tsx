@@ -18,7 +18,7 @@ export default function Home() {
             priority
           />
           <h1 className="mt-8 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
-            Suck Less at Cybersecurity With My Book
+            Suck Less at Cybersecurity With This Book
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
             During a targeted exercise in the U.S. Air Force we "shut down" a
