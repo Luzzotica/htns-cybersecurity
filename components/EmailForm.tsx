@@ -1,8 +1,10 @@
 "use client";
 
-import { useForm } from "react-hook-form";
+import { track } from "@vercel/analytics";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { emailSchema, type EmailFormData } from "@/lib/validations";
 
 type FormVariant = "first-chapter" | "newsletter" | "resource";
@@ -21,6 +23,12 @@ const API_ENDPOINTS: Record<FormVariant, string> = {
   resource: "/api/subscribe",
 };
 
+const CONVERSION_KEYS: Record<FormVariant, string> = {
+  "first-chapter": "first_chapter_signup",
+  newsletter: "newsletter_signup",
+  resource: "resource_signup",
+};
+
 export function EmailForm({
   variant,
   submitLabel,
@@ -28,6 +36,7 @@ export function EmailForm({
   resourceType,
   successMessage,
 }: EmailFormProps) {
+  const pathname = usePathname() ?? "/";
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -66,6 +75,11 @@ export function EmailForm({
           body.error ?? "Something went wrong. Please try again.",
         );
       }
+
+      track("email_submission", {
+        form: CONVERSION_KEYS[variant],
+        path: pathname,
+      });
 
       setIsSubmitted(true);
       if (variant === "first-chapter") {
